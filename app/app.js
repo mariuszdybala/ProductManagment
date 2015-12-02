@@ -3,5 +3,5 @@
  */
 (function () {
     "use strict";
-     angular.module("productManagement",["commonServices", "productResourceMock"]);
+     angular.module("productManagement",["common.services", "productResourceMock"]);
 }());
