@@ -5,7 +5,34 @@
     <title>Acme Product Managment</title>
     <script src="js/angular.js"></script>
 </head>
-<body>
+<body ng-app="">
+{{2+2}}
+
+<table>
+    <thead>
+    <tr>
+        <td>Image</td>
+        <td>Product</td>
+        <td>Code</td>
+        <td>Available</td>
+        <td>Price</td>
+    </tr>
+    </thead>
+    <tr ng-repeat="product in vm.products">
+        <td>
+            <img ng-if="vm.showImage"
+                 ng-src="{{product.imageUrl}}"
+                 style="width:50px;margin:2px"
+                 title="{{product.productName}}">
+        </td>
+        <td>{{ product.productName}}</td>
+        <td>{{ product.productCode }}</td>
+        <td>{{ product.releaseDate }}</td>
+        <td>{{ product.price | currency }}</td>
+    </tr>
+
+
+</table>
 
 
 </body>
